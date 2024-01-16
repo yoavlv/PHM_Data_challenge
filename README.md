@@ -2,9 +2,9 @@
 This PHM Data Challenge is focused on fault detection and magnitude estimation for a generic gearbox using accelerometer data and information about bearing geometry. Scoring is based on the ability to correctly identify type, location, and magnitude and damage in a gear system.
 Additional information can be found on the competition blog, http://phm09challenge.blogspot.com.
 
-Gearbox
+## Gearbox
 The data presented here are representative of generic industrial gearbox data. Figure 1 is a schematic of the gearbox used to collect the data.
- ![img.png](img.png)
+ ![img.png](img/img.png)
 Figure 1: Schematic of the apparatus (click to enlarge).
 Two geometries are used,one using a spur gears, the other using spiral cut (helical) gears. The spur geometry is:
 	Input shaft: 1-Input Pinion: 32 teeth
@@ -27,19 +27,19 @@ Pitch Diameter: 1.319"
 Contact Angle: 0
  
 Figure 2: Overview of the apparatus (click to enlarge).
- ![img_3.png](img_3.png)
+ ![img_3.png](img/img_3.png)
 Figure 3: Inside the gearbox (click to enlarge).
- ![img_2.png](img_2.png)
+ ![img_2.png](img/img_2.png)
 Figure 3a: Inside the gearbox detail (click to enlarge).
- ![img_1.png](img_1.png)
+ ![img_1.png](img/img_1.png)
 Figure 4: Example of gear faults. Left to right: normal, missing tooth, chipped tooth (click to enlarge).
- ![img_4.png](img_4.png)
+ ![img_4.png](img/img_4.png)
 Figure 5: Location of input shaft accelerometer.
- ![img_5.png](img_5.png)
+ ![img_5.png](img/img_5.png)
 Figure 6: Location of output shaft accelerometer.
- ![img_6.png](img_6.png)
+ ![img_6.png](img/img_6.png)
 Figure 7: Detail of tachometer pickup.
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 
 ## Fundamentals
 Some fundamental signal processing techniques and diagnostic features for gearbox components are provided below. The information provided is only intended as a brief introduction to existing domain knowledge and is NOT meant to guide the challenge participants in any way.
@@ -50,7 +50,7 @@ Accelerometer data can be analyzed in a variety of domains like time, frequency,
 
 
 Gearbox Component Fault Signatures
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 ## Data
 Data were sampled synchronously from accelerometers mounted on both the input and output shaft retaining plates. An attached tachometer generates 10 pulses per revolution providing very accurate zero crossing information.
