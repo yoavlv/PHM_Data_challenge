@@ -1,23 +1,90 @@
+# Methodology Overview for PHM Data Challenge
+
+## Objective
+Our primary goal was to identify abnormal signal patterns in gearbox data from 560 runs, distinguishing them from normal operational signals. This task was part of the PHM Data Challenge focused on fault detection and magnitude estimation in a gearbox using accelerometer data and bearing geometry information.
+
+## Approach
+### 1. Data Acquisition and Preparation:
+
+* The data were then segmented into 560 separate runs, each needing classification.
+
+### 2. Normalization and Tensor Conversion:
+* Utilizing a MinMaxScaler, we normalized the data for each run.
+* The normalized data was then converted into tensors for further processing.
+
+### 3. Model Development:
+
+* We employed a Long Short-Term Memory (LSTM) neural network, comprising an Encoder-Decoder architecture, optimized for sequential data like ours.
+* The LSTM model was designed to identify patterns within the time-series data, capturing both temporal dependencies and anomalies.
+
+### 4. Training and Validation:
+* The dataset was divided into training and validation sets.
+* We trained the model over 30 epochs, monitoring loss metrics to gauge performance.
+* To prevent overfitting, early stopping was implemented based on validation loss.
+
+### 5. Threshold Determination:
+
+* Post-training, we analyzed the model’s loss over epochs to establish a threshold for anomaly detection.
+* This threshold was critical in differentiating between normal and abnormal signals.
+
+### 6. Anomaly Detection and Classification:
+
+* Using the established threshold, we classified each run as normal or anomalous based on its loss value.
+* Runs exceeding the threshold were marked as anomalies.
+
+### 7. Result Submission:
+
+* The final step involved preparing a CSV file with our classifications (0 for normal, 1 for abnormal) for each of the 560 runs.
+* This file was then submitted as our competition entry.
+
+####  Tools and Technologies
+* Programming Language: Python
+* Libraries: PyTorch for LSTM model, Pandas for data manipulation, Matplotlib and Seaborn for data visualization.
+
+
+## Loss plot 
+![img.png](img/loss_plot_30.png)
+
+## Threshold plot
+![img.png](img/threshold_plot_30.png)
+
+
+## Method:
+Our method we took to solve the problem in to try to find the normal signal pattern from all the 560 runs
+and then to try to reveal an abnormal signal pattern between the data by using threshold to detract the runs out of normal distribution.
+
+
 ## PHM Data Challenge 
 This PHM Data Challenge is focused on fault detection and magnitude estimation for a generic gearbox using accelerometer data and information about bearing geometry. Scoring is based on the ability to correctly identify type, location, and magnitude and damage in a gear system.
 Additional information can be found on the competition blog, http://phm09challenge.blogspot.com.
+
 
 ## Gearbox
 The data presented here are representative of generic industrial gearbox data. Figure 1 is a schematic of the gearbox used to collect the data.
  ![img.png](img/img.png)
 Figure 1: Schematic of the apparatus (click to enlarge).
 Two geometries are used,one using a spur gears, the other using spiral cut (helical) gears. The spur geometry is:
+
 	Input shaft: 1-Input Pinion: 32 teeth
+
 	Idler shaft: 1st idler gear: 96 teeth
+
 	Idler shaft: 2nd (output) idler gear: 48 teeth
+
 	Output shaft: output pinion: 80 teeth
+
 Thus, from input to output the gear reduction ratio is: 16/48*24/40, or 5 to 1 reduction.
+
 Acquisition System
 Endevco 10mv/g Accel, +/- 1% error, Resonance > 45KHz.
 Three Channels:
+
 	Channel 1 is the input side Accelerometer
+
 	Channel 2 is the output side Accelerometer
+
 	Channel 3 is the Tachometer Signal: 10 pulse per revolution
+
 Sample Rate: 66,666.67 Samples per Second (200 KHz/3).
 Bearing
 MB Manufacturing ER-10K

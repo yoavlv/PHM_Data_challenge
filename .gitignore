@@ -1,4 +1,4 @@
 /.ipynb_checkpoints
 models/.ipynb_checkpoints
-
+*.pth
 /PHM09_competition_1
