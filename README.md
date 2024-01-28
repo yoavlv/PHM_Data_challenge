@@ -132,6 +132,8 @@ Each row corresponds to run number, i.e., row 1 should correspond to the data in
 # Performance Evaluation
 The goal is to minimize the Hamming distance between your results matrix and the true state of the system. For example, if the true state of the system is [1,0,0,1,0] and you submit [1,1,0,0,0,0], your score is 2. Best possible performance is indicated by a Hamming distance score of 0 and the worst score is (560x1=)560, provided the uploaded file is correctly formatted. Only the Hamming distance score mentioned above is used to determine the final scores and ranking.
 
+# Final result anomaly list by index:
+[37, 53, 68, 82, 91, 99, 103, 179, 195, 197, 207, 237, 247, 269, 288, 308, 345, 369, 396, 431, 436, 441, 472, 513, 546, 548]
 
 
 
