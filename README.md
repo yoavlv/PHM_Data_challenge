@@ -136,4 +136,3 @@ The goal is to minimize the Hamming distance between your results matrix and the
 [37, 53, 68, 82, 91, 99, 103, 179, 195, 197, 207, 237, 247, 269, 288, 308, 345, 369, 396, 431, 436, 441, 472, 513, 546, 548]
 
 
-

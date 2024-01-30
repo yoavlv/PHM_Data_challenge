@@ -7,3 +7,4 @@ Document_detailing_the_products_for_submission.docx
 models/model0.ipynb
 models/*.pth
 models/.ipynb_checkpoints
+*.docx
